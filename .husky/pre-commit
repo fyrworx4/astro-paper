@@ -2,3 +2,10 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx lint-staged
+
+# New files, add/update the pubDatetime
+git diff --cached --name-status | egrep -i "^(A).*\.(md)$" | while read a b; do
+  cat $b | sed "/---.*/,/---.*/s/^pubDatetime:.*$/pubDatetime: $(date -u "+%Y-%m-%dT%H:%M:%SZ")/" > tmp
+  mv tmp $b
+  git add $b
+done

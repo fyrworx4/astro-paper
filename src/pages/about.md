@@ -3,34 +3,26 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+Hi! I do red team stuff during the day but I'm also an avid gym-goer and an average enjoyer of coffee.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+My entire journey started by taking a Cisco networking class at a local community college in the summer of 2017. From there I've achieved various certifications such as CySA+ and CCNA Security, and eventually made my way to join the CCDC team at CPP after high school.
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+I studied at CPP from 2019 to 2023, where I led a student organization called [SWIFT](https://www.calpolyswift.org/) for a couple years and also competed in CCDC and CPTC through [CPP Cyber](https://cysec.team/) throughout college. While most of my early background included network infrastructure and security engineering, a twist of fate has led me to focus on offensive security during my last few years at CPP.
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+Now, I'm an Associate Red Team Consultant at CrowdStrike and I help out with events like [WRCCDC](https://wrccdc.org/) as a red teamer.
 
-## Tech Stack
+I've had the utmost pleasure to work with some of the brightest minds during my time at CPP, whose blogs can be found below:
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+- [nosecurity.blog](https://nosecurity.blog/)
+- [gabrielfok.us](https://gabrielfok.us/)
+- [bri5ee.sh](https://bri5ee.sh/)
+- [jessicaleung](https://jessicacleung.com/)
+- [rsecke.com](https://rsecke.com/)
+- [nigerald](https://dtsec.us/)
+- [evan deters](https://evandeters.com/)
 
-## Features
+## About this blog
 
-Here are certain features of this site.
+This blog will contain anything related to my technical and personal learning experiences. While my current focus lies within offensive security, in the past I've worked with cloud infrastructure, networking, and other random stuff.
 
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+I'm also heavily passionate about the ephemeral, hands-on nature of learning cyber - that you must **seek for understanding** instead of expecting knowledge when it's merely presented to you.
