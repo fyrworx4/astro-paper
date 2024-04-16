@@ -21,6 +21,7 @@ I've had the utmost pleasure to work with some of the brightest minds during my 
 - [nigerald](https://dtsec.us/)
 - [evan deters](https://evandeters.com/)
 - [soh3ee](https://soh3ee.sh/)
+- [tanay](https://altoid0.com/)
 
 ## About this blog
 
