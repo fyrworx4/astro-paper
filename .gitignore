@@ -35,3 +35,5 @@ pnpm-debug.log*
 .pnp.*
 
 node_modules
+
+.vscode/*
