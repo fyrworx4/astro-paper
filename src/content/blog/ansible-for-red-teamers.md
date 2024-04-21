@@ -2,7 +2,7 @@
 title: Automation Domination - Using Ansible for Red Team Operations
 author: taylor
 pubDatetime: 2024-04-21T02:00:04Z
-modDatetime:
+modDatetime: 2024-04-21T04:04:55Z
 slug: ansible-red-team
 featured: false
 draft: false
@@ -10,6 +10,8 @@ tags:
   - ansible
   - red team
   - automation
+  - infrastructure
+  - red vs. blue
 description: Ansible use cases for red team engagements.
 ---
 

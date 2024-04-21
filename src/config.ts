@@ -2,8 +2,8 @@ import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
   website: "https://oneoneone.one/", // replace this with your deployed domain
-  author: "oneoneonedotone",
-  desc: "Cybersecurity and other stuff",
+  author: "taylor",
+  desc: "welcome to my LAN party 💻",
   title: "oneoneone.one",
   ogImage: "markdown.jpg",
   lightAndDarkMode: true,
