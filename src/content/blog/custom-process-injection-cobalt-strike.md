@@ -4,7 +4,7 @@ author: taylor
 pubDatetime: 2024-06-15T06:25:41Z
 slug: custom-process-injection-cobalt-strike
 featured: false
-draft: first
+draft: false
 tags:
   - malware-development
   - red-team
