@@ -48,11 +48,20 @@ Since QueueUserAPC requires an alertable or suspended thread, one of the main wa
 
 The Process Inject Kit comes with two `.c` files, `process_inject_spawn.c` and `process_inject_explicit.c`, which contain code to perform their associated fork and run technique.
 
-I decided to go with `process_inject_spawn.c` for this case. This method spawns a temporary process to execute our capabilities, and we should be able to customize the process parameters so that it spawns in a suspended state.
+I decided to go with `process_inject_spawn.c` for this case, which spawns a temporary process to execute our capabilities. We can alter this code to get our process to spawn in a suspended state and perform QueueUserAPC against it.
 
 ## Customizing Process Spawning
 
-The code currently uses `BeaconSpawnTemporaryProcess`, which doesn't provide options to create the process in a suspended state. We would need to use WinAPIs like `CreateProcessA` for our case.
+The code currently uses `BeaconSpawnTemporaryProcess`, which accounts for things like PPIDs, process architecture, and other Beacon-related data, but doesn't provide options to create the process in a suspended state.
+
+```c
+if (!BeaconSpawnTemporaryProcess(x86, ignoreToken, &si, &pi)) {
+  BeaconPrintf(CALLBACK_ERROR, "Unable to spawn %s temporary process.", x86 ? "x86" : "x64");
+  return;
+}
+```
+
+We would need to use WinAPIs like `CreateProcessA` for our case.
 
 For all WinAPIs like `CreateProcessA`, we need to import them into our program by adding something like this to the top of the file:
 
@@ -98,7 +107,7 @@ By default, when running fork and run command using the "spawn" method, Cobalt S
 
 However, this is heavily signatured so it's common to see operators change this value to something else. We can do this within the beacon by running the command:
 
-```text
+```plaintext
 spawnto x64 %windir%\sysnative\notepad.exe
 ```
 
@@ -221,23 +230,35 @@ KERNEL32$ResumeThread(pi.hThread);
 
 ## Examining Process Memory
 
+We can build the kit with `build.sh`, which produces a `.cna` file that we can load into our teamserver.
+
+```plaintext
+$ ./build.sh /opt/cobaltstrike/custom-inject-output
+[Process Inject kit] [+] You have a x86_64 mingw--I will recompile the process inject beacon object files
+[Process Inject kit] [*] Compile process_inject_spawn.x64.o
+[Process Inject kit] [*] Compile process_inject_spawn.x86.o
+[Process Inject kit] [*] Compile process_inject_explicit.x64.o
+[Process Inject kit] [*] Compile process_inject_explicit.x86.o
+[Process Inject kit] [+] The Process inject object files are saved in '/opt/cobaltstrike/custom-inject-output'
+```
+
 Since I was calling `VirtualAllocEx` with RWX memory permissions, I wanted to see what it would look like in Process Hacker to confirm that the WinAPIs were being used properly.
 
 I ran `mimikatz standard::sleep 80000` on the beacon, since running `mimikatz` is one of the commands that uses the fork and run method.
 
-<img src="/src/assets/images/custom-process-injection-cobalt-strike/beacon-na.png">
+![](https://i.postimg.cc/5ymrWvS0/beacon-na.png)
 
 Examining the memory contents it seemed that the region had been freed.
 
-<img src="/src/assets/images/custom-process-injection-cobalt-strike/process-hacker-na.png">
+![](https://i.postimg.cc/jds9QgRJ/process-hacker-na.png)
 
 This was because I had the setting `cleanup` set to `true` in my malleable C2 profile, so I switched that to `false` and ran the `mimikatz` command again.
 
-<img src="/src/assets/images/custom-process-injection-cobalt-strike/beacon-rwx.png">
+![](https://i.postimg.cc/Bb3zzNDk/beacon-rwx.png)
 
 And there it is! The RWX has confirmed that my `VirtualAllocEx` is being used and my code isn't broken.
 
-<img src="/src/assets/images/custom-process-injection-cobalt-strike/process-hacker-rwx.png">
+![](https://i.postimg.cc/pVQ4jbMH/process-hacker-rwx.png)
 
 ## Code Snippets
 
