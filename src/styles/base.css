@@ -1,6 +1,9 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100..500&display=swap";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   :root,
@@ -13,13 +16,12 @@
     --color-border: 236, 233, 233;
   }
   html[data-theme="dark"] {
-    --color-fill: 47, 55, 65;
-    --color-text-base: 230, 230, 230;
-    /*--color-accent: 165, 140, 255; */
-    --color-accent: 26, 217, 217;
-    --color-card: 63, 75, 90;
-    --color-card-muted: 89, 107, 129;
-    --color-border: 59, 70, 85;
+    --color-fill: 33, 39, 55; /* lower contrast bgColor */
+    --color-text-base: 234, 237, 243;
+    --color-accent: 234, 237, 243;
+    --color-card: 52, 63, 96;
+    --color-card-muted: 92, 108, 156;
+    --color-border: 234, 237, 243;
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
@@ -30,7 +32,7 @@
     display: block;
   }
   body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base 
+    @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
   section,
