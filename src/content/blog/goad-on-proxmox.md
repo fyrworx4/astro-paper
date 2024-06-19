@@ -4,7 +4,7 @@ author: taylor
 pubDatetime: 2024-06-19T22:30:09Z
 slug: goad-on-proxmox
 featured: false
-draft: first
+draft: false
 tags:
   - proxmox
   - goad
