@@ -16,6 +16,10 @@ description: How to install GOAD on Proxmox.
 
 ## Introduction
 
+Update: Honestly, just use [Ludus](https://gitlab.com/badsectorlabs/ludus).
+
+---
+
 Mayfly has already made a [guide](https://mayfly277.github.io/posts/GOAD-on-proxmox-part1-install/) on installing GOAD on Proxmox. However, reading through the blog it seemed a bit too over complicated for my situation. For one, I have Proxmox installed in my homelab, so any NAT forwarding rules will be unnecessary to reach any of the internal boxes. I don't mind if some of my VMs are directly connected to my home network, and I also don't really care too much about proper firewall rules implementation and just want things to "work".
 
 Therefore, many of the steps will be similar to Mayfly's guide, but with my own twist to suit my own situation.
