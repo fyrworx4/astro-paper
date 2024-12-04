@@ -4,7 +4,7 @@ author: taylor
 pubDatetime: 2024-12-03T13:53:49Z
 slug: haproxy-c2-redirectors
 featured: false
-draft: false
+draft: true
 tags:
   - c2
   - infrastructure
