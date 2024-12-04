@@ -1,17 +1,14 @@
 ---
-title: Example Draft Post
+title: C2 HTTP(S) Redirectors with HAProxy
 author: taylor
 pubDatetime: 2024-12-04T19:10:08Z
-slug: example-draft-posta
+slug: haproxy-c2-redirector
 featured: false
 draft: false
 tags:
-  - TypeScript
-  - Astro
-description:
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel
-  fringilla est
+  - c2
+  - infrastructure
+description: Using HAProxy to redirect C2 traffic
 ---
 
 ## Table of Contents
