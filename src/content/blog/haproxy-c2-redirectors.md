@@ -1,7 +1,7 @@
 ---
 title: Configuring HAProxy for C2 Redirection
 author: taylor
-pubDatetime: 2024-12-03T13:51:49Z
+pubDatetime: 2024-12-03T13:52:49Z
 slug: haproxy-c2-redirectors
 featured: false
 draft: false
