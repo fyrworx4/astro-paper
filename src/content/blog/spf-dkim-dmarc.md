@@ -23,6 +23,8 @@ Let's dive into it, shall we?
 
 [I have a TLDR at the bottom](#to-summarizetldr)
 
+_For clarification, SPF/DKIM/DMARC security checks are only performed during the receiving of emails. It does not care about sending email_
+
 ## Table of Contents
 
 ## What is DMARC?
