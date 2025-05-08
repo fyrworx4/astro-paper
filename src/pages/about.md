@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Hi! I'm currently a Red Team Consultant at CrowdStrike. Outside work, I enjoy going to the gym, finding the best boba spots, snowboarding, playing pickleball, and sometimes taking my motorcycle out for a spin.
+Hi! I do work as a red team consultant. Outside work, I enjoy going to the gym, finding the best boba spots, snowboarding, playing pickleball, and sometimes taking my motorcycle out for a spin.
 
 My journey began with Cisco and CompTIA courses at a local community college in the summer of 2017. I've obtained certs like CySA+ and CCNA Security and made my way into Cal Poly Pomona's CCDC team.
 
