@@ -13,7 +13,7 @@ tags:
 description: Some cool and quick optimizations to make pentesting a little bit easier.
 title: The Linux Toolbox for Pentesters
 pubDatetime: 2024-04-12T06:39:44.000Z
-modDatetime: 2025-12-27T03:56:33Z
+modDatetime: 2024-11-18T05:22:49Z
 ---
 
 Here's a collection of useful Linux tips and tricks that have improved my workflow throughout my
@@ -137,7 +137,8 @@ Python virtual environments save lives. Run the following before installing pack
 curl -fsSL https://pyenv.run | bash
 ```
 
-## Vim Shortcuts
+
+### Vim Shortcuts
 
 Some keyboard shortcuts / commands to remember:
 
@@ -240,6 +241,7 @@ cd kali-on-command
 ansible-playbook -c local -i localhost, playbook.yml
 ```
 
+
 ## Fish
 
 Update: I no longer use fish. I just use ZSH.
@@ -319,6 +321,12 @@ end
 funcsave gsearch
 ```
 
+### Fish Scripting
+
+```bash
+
+```
+
 ## Neovim
 
 Update: I don't use Neovim anymore. It took way too long and too much effort to get plugins to work. I just use Sublime Text now with vim keybinds.
@@ -372,4 +380,3 @@ tnoremap <Esc> <C-\><C-n>
 - [https://gist.github.com/MohamedAlaa/2961058](https://gist.github.com/MohamedAlaa/2961058)
 - [https://tmuxcheatsheet.com/](https://tmuxcheatsheet.com/%60)
 - [https://docs.rockylinux.org/books/nvchad/nvchad_ui/using_nvchad/](https://docs.rockylinux.org/books/nvchad/nvchad_ui/using_nvchad/)
-- [https://github.com/pyenv/pyenv?tab=readme-ov-file#installation](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
